@@ -1,0 +1,127 @@
+.top-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 40px 0
+
+.top-phone
+  font-size: 14px
+  display: flex
+  margin-left: 58px
+  align-items: center
+  font-family: "FiraSansItalic", sans-serif
+  color: $accent-blue
+  white-space: nowrap
+  .svg
+    width: 15px
+    height: auto
+    fill: $accent-blue
+    margin-right: 8px
+
+.top-cart
+  position: relative
+  .svg
+    height: 31px
+    width: auto
+    fill: $accent-blue
+  span
+    position: absolute
+    left: -6px
+    bottom: 0
+    padding-top: 1px
+    width: 12px
+    height: 12px
+    background-color: $accent-blue
+    color: #fff
+    line-height: 1
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 9px
+    font-weight: 700
+
+.top-logo
+  margin: 0 90px
+
+.main-mnu
+  margin-top: 5px
+  ul
+    display: flex
+    justify-content: center
+  li
+    font-family: "FiraSansBook", sans-serif
+    margin: 0 28px
+    a
+      color: #939393
+      &:hover
+        color: $accent-blue
+
+
+.hamburger
+  height: 19px
+  display: none
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: $accent-blue
+  width: 30px
+  height: 3px
+
+.hamburger--elastic .hamburger-inner:before
+  top: 8px
+
+.hamburger--elastic .hamburger-inner:after
+  top: 16px
+
+.hamburger-box
+  width: 30px
+  height: 19px
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+  background-color: $accent-blue
+
+.hamburger--elastic.is-active .hamburger-inner:after
+  transform: translate3d(0,-16px,0) rotate(-270deg)
+
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: #f7f7f7
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.60)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: $accent-blue
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: $accent-blue
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: $accent-blue
+
+.mm-menu_theme-dark .mm-listview .mm-btn_next:after
+  border-color: $accent-blue
+
+.mm-menu_theme-dark .mm-btn:after, .mm-menu_theme-dark .mm-btn:before
+  border-color: $accent-blue
+//mmenu customization end
