@@ -45,6 +45,20 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    $('.intro-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 1,
+        margin: 30,
+        dots: false,
+        autoHeight: false,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        navText: ["", ""],
+        autoplaySpeed: 600,
+        navSpeed: 600
+    });
+
 
     $('img.svg').each(function(){
         var $img = jQuery(this);

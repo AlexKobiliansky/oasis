@@ -6,6 +6,25 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .tizer-line
+    margin-left: 50px
+    margin-right: 50px
+
+  .tizer-item
+    padding: 8px 35px
+
+  .intro-slide
+    h1
+      font-size: 76px
+    p
+      font-size: 24px
+    &-content
+      max-width: 500px
+
+  .category-line
+    margin-left: 60px
+    margin-right: 60px
+
   .top-line
     flex-wrap: wrap
     &-item
@@ -30,6 +49,34 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .tizer-line
+    top: 0
+    margin-top: 30px
+    margin-left: 0
+    margin-right: 0
+
+  .tizer-item
+    padding-left: 25px
+    padding-right: 25px
+    font-size: 11px
+
+  .intro-slide
+    padding: 75px
+    height: 400px
+    h1
+      font-size: 60px
+
+  .s-intro
+    padding-top: 40px
+
+  .category-line
+    margin-left: 0
+    margin-right: 0
+
+  .catline-item
+    &-title
+      font-size: 14px
+
   .top-line
     &-item
       width: 33.333%
@@ -53,6 +100,39 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .tizer-line
+    flex-wrap: wrap
+
+  .tizer-item
+    width: 50%
+    margin-bottom: 30px
+    font-size: 12.5px
+    &:nth-child(2)
+      &:after
+        display: none
+    &:nth-child(3), &:nth-child(4)
+      margin-bottom: 0
+
+  .intro-slide
+    h1
+      font-size: 40px
+    p
+      font-size: 18px
+
+  .category-line
+    flex-wrap: wrap
+
+  .catline-item
+    width: calc(50% - 30px)
+    margin-bottom: 30px
+    &:after
+      right: -31px
+    &:nth-child(2)
+      &:after
+        display: none
+    &:nth-child(3), &:nth-child(4)
+      margin-bottom: 0
+
   .main-mnu
     display: none
 
@@ -71,7 +151,68 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .tizer-item
+    width: 100%
+    margin-bottom: 50px
+    font-size: 16px
+    &:after
+      height: 2px
+      width: 200px
+      top: auto
+      bottom: -25px
+      right: calc(50% - 100px)
+    &:nth-child(2)
+      &:after
+        display: block
+    &:nth-child(3)
+      margin-bottom: 50px
+
+  .intro-slider
+    .owl-nav
+      button.owl-prev
+        left: 5px
+      button.owl-next
+        right: 5px
+
+  .intro-slide
+    padding: 50px
+    height: 350px
+
+
+  .s-intro
+    padding-top: 0
+
+  .category-line
+    padding: 30px
+
+  .catline-item
+    width: 100%
+    justify-content: center
+    margin-bottom: 50px
+    &:before
+      height: 100%
+    &:after
+      width: 200px
+      height: 2px
+      bottom: -28px
+      top: auto
+      right: calc(50% - 100px)
+    &:nth-child(3)
+      margin-bottom: 50px
+    &:nth-child(2)
+      &:after
+        display: block
+    &-icon
+      height: 45px
+      margin-right: 10px
+    &-title
+      font-size: 18px
+
+
+
   .top-line
+    padding-bottom: 0
     .btn-wrap
       order: 4
       width: calc(50% - 5px)
@@ -102,6 +243,16 @@
     width: 50%
 
 @media (max-width: 390px)
+
+  .intro-slide
+    h1
+      font-size: 34px
+    p
+      font-size: 16px
+      margin-bottom: 30px
+    .btn
+      font-size: 14px
+
   .top-line
     .btn-wrap
       width: 100%
