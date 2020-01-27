@@ -45,7 +45,7 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
-    $('.intro-slider').owlCarousel({
+    $('#intro-slider').owlCarousel({
         loop:true,
         nav: true,
         items: 1,
@@ -58,6 +58,55 @@ $(document).ready(function(){
         autoplaySpeed: 600,
         navSpeed: 600
     });
+
+    $('.category-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 5,
+        margin: 18,
+        dots: false,
+        autoHeight: false,
+        navText: ["", ""],
+        responsive:{
+            0:{
+                items:1,
+            },
+            480:{
+                items:2,
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items:4,
+            },
+            1200:{
+                items:5,
+                loop:false
+            }
+        }
+    });
+
+
+    // function heightses() {
+    //
+    //     if ($(window).width()>=480) {
+    //         $('.prod-item-title').height('auto').equalHeights();
+    //     }
+    //
+    // }
+    //
+    // $(window).resize(function() {
+    //     heightses();
+    // });
+    //
+    // heightses();
+
+    $('.category-slider').each(function(){
+        $(this).find('.prod-item-title').equalHeights();
+    })
+
+
 
 
     $('img.svg').each(function(){

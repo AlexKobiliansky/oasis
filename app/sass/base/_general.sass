@@ -84,8 +84,35 @@ body
   border-color: $accent-red
   color: $accent-red
   background-color: transparent
+  box-shadow: 2px 3px 3px transparent
   &:hover, &:active, &:focus
     background-color: $accent-red
     color: #fff
+    box-shadow: 2px 3px 3px rgba(#000, .4)
+
+.btn-white
+  border-color: #fff
+  background-color: transparent
+  color: #fff
+
+
+
+.owl-carousel
+  position: relative
+  .owl-nav
+    position: absolute
+    width: 100%
+    left: 0
+    top: calc(50% - 8px)
+    button.owl-prev, button.owl-next
+      width: 20px
+      height: 20px
+      background-image: url('../img/icons/slider-arrow.svg')
+      background-repeat: no-repeat
+      background-size: 9px 16px
+      background-position: center center
+    button.owl-prev
+      transform: rotate(180deg)
+
 
 

@@ -6,6 +6,18 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .prod-item
+    &-price
+      font-size: 18px
+      span
+        font-size: 24px
+
+  .consult-decor-2
+    right: 10px
+
+  .consult-line-content
+    font-size: 22px
+
   .tizer-line
     margin-left: 50px
     margin-right: 50px
@@ -49,6 +61,21 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .intro-decor-1
+    display: none
+
+  .consult-decor
+    display: none
+
+  .consult-line-content
+    font-size: 16px
+
+  .consult-line
+    margin-top: 0
+    margin-bottom: 45px
+    .btn-white
+      font-size: 14px
+
   .tizer-line
     top: 0
     margin-top: 30px
@@ -78,6 +105,7 @@
       font-size: 14px
 
   .top-line
+    padding-bottom: 0
     &-item
       width: 33.333%
       margin-bottom: 30px
@@ -99,6 +127,18 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .s-intro
+    padding-top: 0
+
+  .intro-slide
+    height: 300px
+
+  .consult-line-content
+    padding-right: 10px
+    font-size: 14px
+
+
 
   .tizer-line
     flex-wrap: wrap
@@ -151,6 +191,16 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .prod-item-title
+    margin-bottom: 15px
+
+  .consult-line-wrap
+    flex-direction: column
+    text-align: center
+
+  .consult-line-content
+    margin-bottom: 20px
 
   .tizer-item
     width: 100%
@@ -243,6 +293,17 @@
     width: 50%
 
 @media (max-width: 390px)
+
+  .category-slider
+    .owl-nav
+      button.owl-prev
+        left: -35px
+      button.owl-next
+        right: -35px
+
+  .category-wrap
+    padding-left: 35px
+    padding-right: 35px
 
   .intro-slide
     h1
