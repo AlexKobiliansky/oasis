@@ -92,6 +92,14 @@ body
     color: #fff
     box-shadow: 2px 3px 3px rgba(#000, .4)
 
+.btn-red-filled
+  border-color: $accent-red
+  color: #fff
+  background-color: $accent-red
+  &:hover
+    background-color: transparent
+    color: $accent-red
+
 .btn-white
   border-color: #fff
   background-color: transparent
@@ -181,3 +189,28 @@ body
   justify-content: center
   align-items: center
   background-color: #f7f7f7
+
+.page-content
+  margin-top: 35px
+
+.breadcrumbs
+  font-size: 10px
+  font-weight: 300
+  a
+    display: inline-block
+    margin-right: 10px
+    position: relative
+    color: #7f7f7f
+    &:after
+      content: '/'
+      position: relative
+      left: 6px
+      color: #7f7f7f
+    &:hover
+      color: $accent-blue
+    &:last-child
+      pointer-events: none
+      &:after
+        display: none
+
+

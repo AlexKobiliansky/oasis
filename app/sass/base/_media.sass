@@ -6,6 +6,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .sidebar
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &>div
+      width: calc(33.333% - 18px)
+
   .footer-right
     padding-left: 30px
 
@@ -72,6 +79,23 @@
     margin-bottom: 30px
 // ≥992px
 +media-breakpoint-down(md)
+
+  .sidebar
+    justify-content: flex-start
+
+
+  .banner
+    width: 250px!important
+    margin-right: 20px
+
+  .side-mnu-wrap
+    width: 100%!important
+
+  .comments-wrap
+    padding-left: 100px
+    padding-right: 100px
+    .comment-item
+      width: 100%
 
   .footer-left, .footer-right
     width: 100%
@@ -167,6 +191,13 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .sidebar
+    justify-content: center
+
+  .comments-wrap
+    padding-left: 50px
+    padding-right: 50px
 
   .comments-slider
     padding-left: 30px
@@ -369,6 +400,10 @@
     width: 50%
 
 @media (max-width: 390px)
+
+  .comments-wrap
+    padding-left: 25px
+    padding-right: 25px
 
   .category-slider
     .owl-nav

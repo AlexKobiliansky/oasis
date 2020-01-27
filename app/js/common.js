@@ -114,8 +114,9 @@ $(document).ready(function(){
             $('.category-slider').each(function(){
                 $(this).find('.prod-item-title').equalHeights();
             });
-        }
 
+            $('.comments-wrap .comment-item-name').height('auto').equalHeights();
+        }
     }
 
     $(window).resize(function() {
@@ -157,6 +158,17 @@ $(document).ready(function(){
     });
 
     $('.preloader').fadeOut();
+
+    $('.comment-item .roll').on('click', function(){
+       var th = $(this);
+       var item = th.parents('.comment-item');
+
+        th.text(function(i, text){
+            return text === "Читать дальше" ? "Свернуть" : "Читать дальше";
+        });
+
+        item.toggleClass('rolled');
+    });
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
