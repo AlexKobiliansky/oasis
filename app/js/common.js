@@ -124,11 +124,6 @@ $(document).ready(function(){
 
     heightses();
 
-
-
-
-
-
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -160,6 +155,8 @@ $(document).ready(function(){
             $img.replaceWith($svg);
         }, 'xml');
     });
+
+    $('.preloader').fadeOut();
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change

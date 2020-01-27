@@ -6,6 +6,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .footer-right
+    padding-left: 30px
+
+  .foot-nav-item
+    max-width: 190px
+
   .s-about
     overflow: hidden
 
@@ -66,6 +72,25 @@
     margin-bottom: 30px
 // ≥992px
 +media-breakpoint-down(md)
+
+  .footer-left, .footer-right
+    width: 100%
+
+  .footer-wrap
+    flex-direction: column
+
+  .foot-nav-item
+    width: 49%
+    max-width: inherit
+    margin-bottom: 30px
+
+  .footer-right
+    text-align: center
+    padding-left: 0
+  .foot-logo
+    img
+      margin-left: auto
+      margin-right: auto
 
   .about-decor
     display: none
@@ -215,6 +240,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .footer-wrap
+    padding-left: 15px
+    padding-right: 15px
+
+  .foot-nav-item
+    width: 100%
+    text-align: center
+    padding-left: 0
+    border-left: 0
+    li
+      margin-bottom: 12px
 
   .comment-item
     flex-direction: column
