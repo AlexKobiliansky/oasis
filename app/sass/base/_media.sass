@@ -192,6 +192,14 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .catalog-wrap
+    .prod-item
+      width: calc(33.333% - 20px)
+      &:nth-child(3n)
+        margin-right: 0
+      &:nth-child(4n)
+        margin-right: 20px
+
   .sidebar
     justify-content: center
 
@@ -271,6 +279,17 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .page-content
+    margin-top: 0
+
+  .catalog-wrap
+    .prod-item
+      width: calc(50% - 10px)
+      &:nth-child(3n)
+        margin-right: 20px
+      &:nth-child(2n)
+        margin-right: 0
 
   .footer-wrap
     padding-left: 15px
