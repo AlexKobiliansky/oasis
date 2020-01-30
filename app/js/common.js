@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     /**
      * mobile-mnu customization
      */
@@ -105,6 +104,43 @@ $(document).ready(function(){
                 margin: 60
             }
         }
+    });
+
+
+    $('.product-slider').owlCarousel({
+        loop:false,
+        nav:false,
+        autoHeight: true,
+        items: 1,
+        thumbs: true,
+        dots: true,
+        thumbsPrerendered: true,
+        thumbItemClass: 'product-nav',
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        mouseDrag: false,
+    });
+
+    $('.product-slider').photoswipe({
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+    });
+
+
+    $('.spinner-amount').on('click', 'button', function(e){
+
+        var parent = $(this).parents('.spinner-amount');
+        var input = parent.find('.amount');
+        var amount = input.val();
+        var btn = parent.siblings('.btn');
+
+        if (!$(this).is('.down')) {
+            amount++
+        } else {
+            if (amount > 1) amount--
+        }
+
+        input.val(amount).attr('value', amount);
     });
 
 
