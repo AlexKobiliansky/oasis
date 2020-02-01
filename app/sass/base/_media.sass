@@ -6,6 +6,14 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .cart-img, .cart-decor
+    display: none
+
+  .cart-item
+    &-title
+      font-size: 15px
+      max-width: 330px
+
   .page-contacts
     overflow: hidden
 
@@ -95,6 +103,36 @@
     margin-bottom: 30px
 // ≥992px
 +media-breakpoint-down(md)
+
+  .cart-form
+    .form-labels-wrap
+      padding-right: 0
+    label
+      span
+        width: 150px
+    input, textarea, .pay-vars-wrap
+      width: calc(100% - 150px)
+    .cart-total
+      margin-right: 0
+    .adres-details
+      input
+        width: calc(25% - 37.5px)
+
+
+  .cart-wrap
+    padding-left: 30px
+    padding-right: 30px
+
+  .cart-item
+    flex-wrap: wrap
+
+  .cart-item-tech
+    width: 100%
+    margin-top: 20px
+    justify-content: flex-end
+  .cart-item-check
+    top: 60px
+
 
   .maincat-wrap
     flex-wrap: wrap
@@ -220,6 +258,49 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .cart-form
+    label
+      display: block
+      span
+        display: block
+        margin-bottom: 3px
+    input, textarea, .pay-vars-wrap
+      width: 100%
+    .adres-details
+      display: flex
+      input
+        width: 25%
+      span
+        display: none
+    .pay-var
+      width: calc(50% - 5px)
+      &:before
+        left: 8px
+    .btn-wrap
+      display: flex
+      align-items: center
+      justify-content: space-between
+    .cart-total
+      top: 0
+      font-size: 16px
+      span
+        font-size: 20px
+
+  .cart-item
+    padding-left: 30px
+    &-img
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 20px
+    &-title
+      width: 100%
+      text-align: center
+      max-width: 100%
+    &-tech
+      justify-content: center
+    &-check
+      top: 12px
+
   .catalog-wrap
     .prod-item
       width: calc(33.333% - 20px)
@@ -307,6 +388,33 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .cart-form
+    .adres-details
+      flex-wrap: wrap
+      input
+        width: 50%
+        &:nth-child(odd)
+          border-right: 1px solid $accent-blue
+        &:nth-child(2), &:nth-child(3)
+          border-bottom: none
+    .pay-vars-wrap
+      flex-wrap: wrap
+    .pay-var
+      width: 100%
+      margin-bottom: 8px
+      &:last-child
+        margin-bottom: 0
+
+  .check-all-label
+    margin-right: 15px
+
+  .cart-item
+    &-tech
+      flex-direction: column
+      .amount-wrap
+        margin-right: 0
+        margin-bottom: 20px
 
   .product
     &-right
@@ -483,6 +591,16 @@
     width: 50%
 
 @media (max-width: 390px)
+
+  .cart-form
+    .btn-wrap
+      flex-direction: column-reverse
+      margin-top: 30px
+      .btn
+        margin-right: 0
+        margin-top: 15px
+      .cart-total
+        margin-right: 0
 
   .contacts-desc
     font-size: 12.5px

@@ -228,4 +228,25 @@ body
     &:hover
       opacity: 1
 
+.jq-checkbox
+  width: 14px
+  height: 14px
+  border-radius: 0
+  background: #f7f7f7
+  padding: 0
+  border: 1px solid $accent-blue
+  box-shadow: none
+  margin-right: 6px
+  &.checked
+    background: $accent-blue
+    padding: 0
+    .jq-checkbox__div
+      border-bottom-color: #fff
+      border-left-color: #fff
+      margin-left: 2px
+  &.focused
+    border: 1px solid $accent-blue
+
+
+
 

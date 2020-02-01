@@ -209,15 +209,115 @@ $(document).ready(function(){
         item.toggleClass('rolled');
     });
 
+    //FORMS
+    $('input[type="checkbox"]').styler();
+
+    $('#check-all').change( function(){
+        if(this.checked) {
+            $('.cart-item').each(function(){
+                $(this).find('.cart-item-check .jq-checkbox').addClass('checked');
+                $(this).find('.cart-item-check input').prop('checked', true);
+            })
+        } else {
+            $('.cart-item').each(function(){
+                $(this).find('.cart-item-check .jq-checkbox').removeClass('checked');
+                $(this).find('.cart-item-check input').prop('checked', false);
+            })
+        }
+    });
+
+    $('.pay-var').on('click', function(){
+        var th = $(this);
+
+       if(!th.hasClass('chosen')) {
+           var pay = th.data('val');
+           $('#pay').val(pay);
+           th.addClass('chosen');
+           th.siblings('.pay-var').removeClass('chosen');
+       }
+    });
+
+    var uPhone = $('.user-phone');
+    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
+
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(4,4);
+        needelem.focus();
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
+    $(function() {
+        $(".btn-popup").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled");
+
+        if (th.hasClass('cart-form')) {
+            var k = 1;
+            $('#cart .cart-item').each(function () {
+                var name = $(this).find('.cart-item-title').text().replace("\"", '&#171;').replace("\"", '&#187;');;
+                var code = $(this).find('.amount').val();
+                var price = $(this).find('.product-price span').text();
+
+                $('#cart-form').append('<input type="hidden" name="Заказанный товар '+k+'" value="'+name+'. Количество: ['+code+ 'шт.] . Стоимость ['+price+' руб.]">');
+                k++;
+
+            });
+
+            var totalPrice = $('#total-price').text();
+            $('#cart-form').append('<input type="hidden" name="Общая сумма заказа" value="'+totalPrice+' руб.">');
+        };
+
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
+
+            $.magnificPopup.open({
+                items: {
+                    src: '#greeting'
+                },
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-request'
+            }, 0);
+
+
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled");
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 3000);
 
         });
         return false;

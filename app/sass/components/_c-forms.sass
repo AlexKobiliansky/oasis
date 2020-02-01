@@ -1,7 +1,136 @@
+form
+  h3
+    font-size: 18px
+    text-transform: uppercase
+    font-weight: 500
+    margin-bottom: 20px
+  label
+    display: block
+    margin-bottom: 20px
+  input, textarea
+    line-height: 1
+    font-size: 14px
+    border: 1px solid $accent-blue
+    padding: 11px 17px 10px
+    color: $accent-blue
+    &::placeholder
+      color: #b2b2b2
+      opacity: .5
+    &.error
+      border-color: red!important
+      color: red!important
+      &::placeholder
+        color: red!important
+  textarea
+    height: 70px
+    resize: none
+  .btn
+    font-size: 14px
+    width: 186px
+  .help-block
+    display: none
+
+
+
+.cart-form
+  margin-top: 40px
+  padding-top: 40px
+  border-top: 5px solid #f7f7f7
+  .form-labels-wrap
+    padding-right: 190px
+  label
+    display: flex
+    align-items: center
+    span
+      width: 190px
+      font-size: 14px
+      font-weight: 500
+  .adres-details
+    input
+      width: calc(25% - 47.5px)
+      border-right: none
+      &:last-child
+        border-right: 1px solid $accent-blue
+  .pay-vars-wrap
+    width: calc(100% - 190px)
+    display: flex
+    justify-content: space-between
+  .pay-var
+    font-size: 14px
+    color: $accent-blue
+    line-height: 1
+    border: 1px solid $accent-blue
+    text-align: center
+    padding: 13px 17px 11px
+    width: calc(50% - 14px)
+    cursor: pointer
+    +mt(.3s)
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 16px
+      +bg-cover
+      background-image: url('../img/icons/mark.png')
+      opacity: 0
+      +mt(.3s)
+      left: 18px
+      top: calc(50% - 8px)
+    &.chosen
+      border-color: $accent-red
+      background-color: $accent-red
+      color: #fff
+      &:before
+        opacity: 1
+  .btn-wrap
+    margin-top: 38px
+    text-align: right
+    .btn
+      margin-right: 30px
+  .cart-total
+    display: inline-block
+    margin-right: 25px
+    font-size: 21px
+    position: relative
+    top: 3px
+    span
+      font-size: 30px
+      font-weight: 500
+  input, textarea
+    width: calc(100% - 190px)
+
+.popup-form
+  position: relative
+  background-color: #fff
+  padding: 50px
+  width: 100%
+  max-width: 500px
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  border: 2px solid $accent-blue
+  p
+    font-size: 14px
+  input, textarea
+    width: 100%
+  .btn-wrap
+    margin-top: 40px
+  h3
+    font-size: 18px
+    text-transform: uppercase
+    font-weight: 500
+    margin-bottom: 20px
+
+.greeting
+  p
+    margin-bottom: 0
+
 .search-form
   input
     width: 135px
     line-height: 1
+    font-size: 12.5px
     border: none
     border-radius: 5px
     padding: 6px 10px
@@ -9,3 +138,27 @@
     color: rgba(#1f2b2a, .65)
     &::placeholder
       color: rgba(#1f2b2a, .65)
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+
