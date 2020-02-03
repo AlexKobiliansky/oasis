@@ -80,7 +80,6 @@ $(document).ready(function(){
             },
             1200:{
                 items:5,
-                loop:false
             }
         }
     });
@@ -212,16 +211,36 @@ $(document).ready(function(){
     //FORMS
     $('input[type="checkbox"]').styler();
 
+
+    $('.cart-item').each(function(){
+       var th = $(this);
+       var checkbox = th.find('.cart-item-check input[type="checkbox"]');
+
+       checkbox.change(function(){
+           if(this.checked) {
+               th.addClass('ready-for-deletion');
+           } else {
+               $('.cart-item').each(function(){
+                   th.removeClass('ready-for-deletion');
+               })
+           }
+       })
+
+
+    });
+
     $('#check-all').change( function(){
         if(this.checked) {
             $('.cart-item').each(function(){
                 $(this).find('.cart-item-check .jq-checkbox').addClass('checked');
                 $(this).find('.cart-item-check input').prop('checked', true);
+                $(this).addClass('ready-for-deletion');
             })
         } else {
             $('.cart-item').each(function(){
                 $(this).find('.cart-item-check .jq-checkbox').removeClass('checked');
                 $(this).find('.cart-item-check input').prop('checked', false);
+                $(this).removeClass('ready-for-deletion');
             })
         }
     });
@@ -266,7 +285,7 @@ $(document).ready(function(){
     });
 
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $(".contact-form").submit(function() { //Change
         var th = $(this);
         th.find(".btn").prop("disabled", "disabled").addClass("disabled");
 

@@ -8,6 +8,8 @@
   z-index: 2
   &-wrap
     position: relative
+  &.favorites-wrap
+    padding-top: 40px
 
 .check-all-label
   margin-bottom: 0
@@ -75,14 +77,19 @@
     align-items: center
     margin-left: auto
     .amount-wrap
-      margin-right: 30px
+      margin-right: 10px
       font-size: 18px
       button
         font-size: 18px
     .product-price
       line-height: 1
+      width: 130px
     input
       font-size: 18px
+  &.favorite-item
+    .btn
+      margin-right: 30px
+
 
 .cart-decor
   position: absolute

@@ -112,146 +112,41 @@
                 <img src="img/cart-img-2.png" alt="alt" class="cart-img cart-img-2">
 
 
-                <div class="cart-wrap">
-                    <div class="cart" id="cart">
-                        <div class="cart-gl">
-                            <label for="check-all" class="check-all-label"><input type="checkbox" id="check-all"><span>Выбрать все</span></label>
-                            <a href="#0" class="delete-checked">Удалить выбранное</a>
-                        </div>
-
-
+                <div class="cart-wrap favorites-wrap">
+                    <div class="cart favorites">
                         <!-- cart-item -->
-                        <div class="cart-item">
-                            <a href="#0" class="cart-item-del"><img src="img/icons/del-icon.svg" alt="Удалить" class="svg" title="Удалить"></a>
-                            <label class="cart-item-check"><input type="checkbox"></label>
+                        <div class="cart-item favorite-item">
                             <div class="cart-item-img" style="background-image: url('img/product-img-1.jpg');"></div>
-                            <div class="cart-item-title">Крафтовый шампунь для всех типов волос Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, maiores?</div>
+                            <a href="#0" class="cart-item-title">Крафтовый шампунь для всех типов волос Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, maiores?</a>
                             <div class="cart-item-tech">
-                                <div class="amount-wrap">
-                            <span class="spinner-amount">
-                                <button type="button" class="down">-</button>
-                                <input type="text" value="1" class="amount" size="2">
-                                <button type="button" class="up btn-grad">+</button>
-                            </span>
-                                </div>
-
-                                <div class="product-price">
-                                    <span>12 450</span> ₽
-                                </div>
+                                <a href="#0" class="btn btn-red">В корзину</a>
+                                <a href="#0" class="to-wishlist"><img src="img/icons/star-icon.svg" alt="alt" class="svg"></a>
                             </div>
                         </div>
                         <!-- /cart-item -->
 
                         <!-- cart-item -->
-                        <div class="cart-item">
-                            <a href="#0" class="cart-item-del"><img src="img/icons/del-icon.svg" alt="Удалить" class="svg" title="Удалить"></a>
-                            <label class="cart-item-check"><input type="checkbox"></label>
+                        <div class="cart-item favorite-item">
                             <div class="cart-item-img" style="background-image: url('img/product-img-1.jpg');"></div>
-                            <div class="cart-item-title">Крафтовый шампунь для всех типов волос</div>
+                            <a href="#0" class="cart-item-title">Крафтовый шампунь для всех типов волос Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, maiores?</a>
                             <div class="cart-item-tech">
-                                <div class="amount-wrap">
-                            <span class="spinner-amount">
-                                <button type="button" class="down">-</button>
-                                <input type="text" value="1" class="amount" size="2">
-                                <button type="button" class="up btn-grad">+</button>
-                            </span>
-                                </div>
-
-                                <div class="product-price">
-                                    <span>450</span> ₽
-                                </div>
+                                <a href="#0" class="btn btn-red">В корзину</a>
+                                <a href="#0" class="to-wishlist"><img src="img/icons/star-icon.svg" alt="alt" class="svg"></a>
                             </div>
                         </div>
                         <!-- /cart-item -->
 
                         <!-- cart-item -->
-                        <div class="cart-item">
-                            <a href="#0" class="cart-item-del"><img src="img/icons/del-icon.svg" alt="Удалить" class="svg" title="Удалить"></a>
-                            <label class="cart-item-check"><input type="checkbox"></label>
+                        <div class="cart-item favorite-item">
                             <div class="cart-item-img" style="background-image: url('img/product-img-1.jpg');"></div>
-                            <div class="cart-item-title">Крафтовый шампунь для всех типов волос</div>
+                            <a href="#0" class="cart-item-title">Крафтовый шампунь для всех типов волос Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, maiores?</a>
                             <div class="cart-item-tech">
-                                <div class="amount-wrap">
-                            <span class="spinner-amount">
-                                <button type="button" class="down">-</button>
-                                <input type="text" value="1" class="amount" size="2">
-                                <button type="button" class="up btn-grad">+</button>
-                            </span>
-                                </div>
-
-                                <div class="product-price">
-                                    <span>450</span> ₽
-                                </div>
+                                <a href="#0" class="btn btn-red">В корзину</a>
+                                <a href="#0" class="to-wishlist"><img src="img/icons/star-icon.svg" alt="alt" class="svg"></a>
                             </div>
                         </div>
                         <!-- /cart-item -->
                     </div>
-
-                    <form class="contact-form cart-form" id="cart-form">
-
-                        <!-- Hidden Required Fields -->
-                        <input type="hidden" name="project_name" value="ОАЗИС ЧИСТОТЫ">
-                        <input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
-                        <input type="hidden" name="form_subject" value="Заявка с сайта ОАЗИС ЧИСТОТЫ">
-                        <!-- END Hidden Required Fields -->
-
-                        <input type="hidden" name="Форма" value="Оформление заказа">
-                        <input type="hidden" name="Способ оплаты" value="Наличными курьеру" id="pay">
-
-                        <h3>Оплата и доставка</h3>
-                        <div class="form-labels-wrap">
-                            <label style="margin-bottom: 8px;">
-                                <span>Адрес доставки</span>
-                                <input type="text" name="Населенный пункт" autocomplete="off"
-                                       data-validation="required" placeholder="Населенный пункт">
-                            </label>
-
-                            <label style="margin-bottom: 8px;">
-                                <span></span>
-                                <input type="text" name="Улица" autocomplete="off"
-                                       data-validation="required" placeholder="Улица">
-                            </label>
-
-                            <label class="adres-details">
-                                <span></span>
-                                <input type="text" name="Дом" autocomplete="off" placeholder="Дом" data-validation="required">
-                                <input type="text" name="Квартира" autocomplete="off" placeholder="Квартира">
-                                <input type="text" name="Подъезд" autocomplete="off" placeholder="Подъезд">
-                                <input type="text" name="Этаж" autocomplete="off" placeholder="Этаж">
-                            </label>
-
-                            <label>
-                                <span>Номер телефона</span>
-                                <input type="text" placeholder="+7 (___) ___-__-__" name="Телефон" autocomplete="off"
-                                       data-validation="custom"
-                                       data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" class="user-phone">
-                            </label>
-
-                            <label>
-                                <span>Ваше имя</span>
-                                <input type="text" placeholder="Ваше имя" name="Имя" autocomplete="off"
-                                       data-validation="custom"
-                                       data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$"
-                                       data-validation-error-msg="* Укажите ваше имя">
-                            </label>
-
-                            <label class="pay-vars">
-                                <span>Способ оплаты</span>
-                                <span class="pay-vars-wrap">
-                                <span class="pay-var chosen" data-val="Наличными курьеру">Наличными курьеру</span>
-                                <span class="pay-var" data-val="Картой курьеру">Картой курьеру</span>
-                            </span>
-                            </label>
-
-                            <label>
-                                <span>Комментарий</span>
-                                <textarea name="Комментарий" autocomplete="off" placeholder="Ваш комментарий"></textarea>
-                            </label>
-                        </div>
-                        <div class="btn-wrap">
-                            <button type="submit" class="btn btn-red">Оформить заказ</button> <span class="cart-total">Итого: <span id="total-price">23900</span>₽</span>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

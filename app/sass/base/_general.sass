@@ -98,7 +98,7 @@ body
   border-color: $accent-red
   color: #fff
   background-color: $accent-red
-  &:hover
+  &:hover, &:focus, &:active
     background-color: transparent
     color: $accent-red
 
@@ -198,6 +198,8 @@ body
 .breadcrumbs
   font-size: 10px
   font-weight: 300
+  position: relative
+  z-index: 3
   a
     display: inline-block
     margin-right: 10px
@@ -218,7 +220,8 @@ body
 .mm-menu
   z-index: 10!important
 
-.to-wishlist
+.to-wishlist, .simplefavorite-button
+  cursor: pointer
   .svg
     fill: #1b1464
     height: 23px
@@ -227,6 +230,11 @@ body
     opacity: .2
     &:hover
       opacity: 1
+
+.simplefavorite-button.active
+  opacity: 1!important
+  .svg
+    opacity: 1
 
 .jq-checkbox
   width: 14px
@@ -246,6 +254,19 @@ body
       margin-left: 2px
   &.focused
     border: 1px solid $accent-blue
+
+.sale
+  line-height: 1
+  background-color: red
+  color: #fff
+  font-weight: 500
+  padding: 7px 5px
+  display: inline-block
+
+.old-price
+  opacity: .7
+  text-decoration: line-through
+  margin-right: 10px
 
 
 

@@ -389,6 +389,9 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .cart-item-tech .product-price
+    width: auto
+
   .cart-form
     .adres-details
       flex-wrap: wrap
@@ -415,6 +418,9 @@
       .amount-wrap
         margin-right: 0
         margin-bottom: 20px
+    &.favorite-item
+      .cart-item-tech
+        flex-direction: row
 
   .product
     &-right
@@ -601,6 +607,7 @@
         margin-top: 15px
       .cart-total
         margin-right: 0
+        width: auto
 
   .contacts-desc
     font-size: 12.5px

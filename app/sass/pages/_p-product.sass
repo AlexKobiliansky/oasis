@@ -8,6 +8,7 @@
   margin-bottom: 20px
   &-part
     width: calc(50% - 10px)
+    position: relative
   &-title
     font-size: 18px
     text-transform: uppercase
@@ -33,6 +34,11 @@
     margin-top: 8px
     .btn
       text-transform: uppercase
+  .sale
+    position: absolute
+    right: 5px
+    top: 5px
+    z-index: 2
 
 .amount-wrap
   display: inline-block
@@ -104,4 +110,7 @@
     flex-direction: column
     justify-content: space-between
     align-items: flex-start
+
+.product-mobile-slides
+  position: relative
 
